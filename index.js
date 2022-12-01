@@ -35,7 +35,7 @@ async function run() {
         const token=jwt.sign(user,process.env.ACCESS_TOKEN_SECRET,{expiresIn:'1h'})
         res.send({token})
        })
-       
+       // add
         app.get('/services/home', async (req, res) => {
             const query = {};
             const cursor = servicesCollection.find(query);
